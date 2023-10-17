@@ -8,7 +8,7 @@ using namespace std;
 		string apellido;
 		int edad;
 		double altura;
-	} persona;
+	}persona;
 
 	const struct Coordenadas {
 		float x;
@@ -29,16 +29,20 @@ int main()
 {
 
 
-	//Añadimos valores a la estructura
+	//AÃ±adimos valores a la estructura
 	persona.nombre = "Bash";
+	string &nombre = persona.nombre;
 	persona.apellido = "Magno";
+	string &apellido = persona.apellido;
 	persona.edad = 19;
+	int &edad = persona.edad;
 	persona.altura = 1.86;
+	double &altura = persona.altura;
 
-	cout <<		"Mi nombre es: "	<< persona.nombre	<<		"\n";
-	cout <<		"Mi apellido es: "	<< persona.apellido	<<		"\n";
-	cout <<		"Mi edad es: "		<< persona.edad		<<		"\n";
-	cout <<		"Mi altura es: "	<< persona.altura	<<		"\n";
+	cout <<		"Mi nombre es: "	<< nombre	<<		"\n";
+	cout <<		"Mi apellido es: "	<< apellido	<<		"\n";
+	cout <<		"Mi edad es: "		<< edad		<<		"\n";
+	cout <<		"Mi altura es: "	<< altura	<<		"\n";
 
 	Coordenadas instance;
 	referencias(instance);
